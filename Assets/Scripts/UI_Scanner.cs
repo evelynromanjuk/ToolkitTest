@@ -7,6 +7,7 @@ public class UI_Scanner : MonoBehaviour
 {
     public Text EmployeeText;
     public Text StatusText;
+    public GameObject floppa;
     
     // Start is called before the first frame update
     void Start()
@@ -22,5 +23,6 @@ public class UI_Scanner : MonoBehaviour
     {
         EmployeeText.text = card.EmployeeName;
         StatusText.text = card.IsValid? "Is valid":"Is not valid";
+        floppa.SetActive(true);
     }
 }
