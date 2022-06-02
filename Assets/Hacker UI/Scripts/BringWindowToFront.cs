@@ -10,7 +10,7 @@ public class BringWindowToFront : MonoBehaviour, IPointerDownHandler
     {
         if (!dragRectTransform)
         {
-            dragRectTransform = transform.parent.GetComponent<RectTransform>();
+            dragRectTransform = transform.parent.parent.GetComponent<RectTransform>();
         }
     }
         public void OnPointerDown(PointerEventData eventData)
