@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ClassicDoor : MonoBehaviour
+public class OpenCloseScript : MonoBehaviour
 {
     //private XRSimpleInteractable simpleInteractable = null;
     [SerializeField] private Animator myDoor = null;
@@ -13,34 +13,19 @@ public class ClassicDoor : MonoBehaviour
         //simpleInteractable = GetComponent <XRSimpleInteractable>();
 
         //simpleInteractable.activated.AddListener(MoveDoor);
+
     }
 
-    public void SetActive (bool value)
-    {
-        if (value)
-        {
-            myDoor.Play("DoorOpen", 0, 0.0f);
-            Debug.Log("Door Open");
-        }
-        else
-        {
-            myDoor.Play("DoorClose", 0, 0.0f);
-            Debug.Log("Door Closed");
-        }
-
-        Debug.Log("You Clicked");
-    }
-
-    public void SetActive2()
+    public void SetActive()
     {
         if (!isOpen)
         {
-            myDoor.Play("DoorOpen2", 0, 0.0f);
+            myDoor.Play("Open", 0, 0.0f);
             isOpen = true;
         }
         else
         {
-            myDoor.Play("DoorClose", 0, 0.0f);
+            myDoor.Play("Close", 0, 0.0f);
             isOpen = false;
             Debug.Log("Close Animation");
         }
