@@ -5,6 +5,7 @@ public class ClassicDoor : MonoBehaviour
 {
     //private XRSimpleInteractable simpleInteractable = null;
     [SerializeField] private Animator myDoor = null;
+
     private bool isOpen = false;
 
     private void Awake()
@@ -34,7 +35,7 @@ public class ClassicDoor : MonoBehaviour
     {
         if (!isOpen)
         {
-            myDoor.Play("DoorOpen", 0, 0.0f);
+            myDoor.Play("DoorOpen2", 0, 0.0f);
             isOpen = true;
         }
         else

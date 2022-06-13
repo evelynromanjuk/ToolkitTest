@@ -2451,6 +2451,21 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 673039917}
+    - target: {fileID: 809543995618687604, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.562
+      objectReference: {fileID: 0}
+    - target: {fileID: 809543995618687604, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 809543995618687604, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.346
+      objectReference: {fileID: 0}
     - target: {fileID: 809543995618687607, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_InteractionManager
