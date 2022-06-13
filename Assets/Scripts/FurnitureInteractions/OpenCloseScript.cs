@@ -6,7 +6,7 @@ public class OpenCloseScript : MonoBehaviour
     //private XRSimpleInteractable simpleInteractable = null;
     [SerializeField] private Animator myDoor = null;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
 
     private void Awake()
     {
