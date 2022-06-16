@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpawnBall : MonoBehaviour
 {
     public GameObject ballPrefab;
+    public Transform parent;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +16,9 @@ public class SpawnBall : MonoBehaviour
 
     public void spawnBall()
     {
-        GameObject b = Instantiate(ballPrefab) as GameObject;
-        b.transform.position = new Vector3(2.39f, 1.5f, 4.68f);
+        GameObject b = Instantiate(ballPrefab);
+        b.transform.SetParent(parent, false);
+        b.transform.localPosition = new Vector3(-0.7f, 1.5f, 0);
 
         Debug.Log("Spawn Ball");
     }

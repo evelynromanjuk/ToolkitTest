@@ -6,4 +6,5 @@ public class EmployeeCard : MonoBehaviour
 {
     public string EmployeeName;
     public bool IsValid;
+    public int Password;
 }

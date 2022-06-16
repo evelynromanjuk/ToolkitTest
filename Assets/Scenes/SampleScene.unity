@@ -1216,8 +1216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e4d03e77bd99a40a122b53f3676360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmployeeText: {fileID: 24803225}
-  StatusText: {fileID: 1958777971}
+  MachineScreenText: {fileID: 0}
+  KeypadManager: {fileID: 0}
 --- !u!1001 &1174012367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2521,5 +2521,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 673039917}
+    - target: {fileID: 6714825664071059505, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbc84ac0d91dccd46bd74480d1700510, type: 3}
