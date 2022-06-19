@@ -812,6 +812,17 @@
                 },
                 {
                     "name": "",
+                    "id": "9a9ad114-53b2-449c-a298-ee99ff3b961c",
+                    "path": "<ViveWand>/trackpadPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "dd433817-216c-46b9-8dd3-f3a4ea1767b9",
                     "path": "<XRController>{RightHand}/grip",
                     "interactions": "",
