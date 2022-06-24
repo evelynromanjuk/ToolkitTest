@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LiquidFlow : MonoBehaviour
+public class FluidFlow : MonoBehaviour
 {
 
     private float size = 0.0f;
