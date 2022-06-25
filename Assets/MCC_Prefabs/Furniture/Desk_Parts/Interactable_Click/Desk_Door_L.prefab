@@ -201,7 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd9c24600309594cb953b1dae56fdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDoor: {fileID: 6279226684096256990}
+  interactableObject: {fileID: 6279226684096256990}
+  isOpen: 0
 --- !u!1001 &2665471216185388940
 PrefabInstance:
   m_ObjectHideFlags: 0
