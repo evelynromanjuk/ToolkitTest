@@ -11,18 +11,25 @@ public class PipeManager : MonoBehaviour
 
     public FluidCompositionManager FluidCompositionManager;
 
-    private float goalPercentage;
+    private float percentageGoal;
     private float totalTime = 40.0f; //seconds
-    private float callsPerSecond = 10.0f;
+    private float callsPerSecond = 4.0f;
     private float currentPercentage = 0.0f;
     private float size = 0.0f;
 
     private bool isOpen = false;
 
+
+    private void Awake()
+    {
+        substanceFluid.currentPercentage = 0;
+        substanceFluid.reachedGoal = false;
+        FluidCompositionManager.addFluidToList(substanceFluid);
+    }
     void Start()
     {
         GetComponent<Renderer>().material = substanceFluid.material;
-        goalPercentage = substanceFluid.percentage;
+        percentageGoal = substanceFluid.percentageGoal;
     }
 
     public void interactTube()
@@ -43,7 +50,7 @@ public class PipeManager : MonoBehaviour
         isOpen = true;
         InvokeRepeating("Scale", 0.0f, 0.02f);
 
-        InvokeRepeating("IncreaseFluidAmount", 0.0f, (1 / callsPerSecond));
+        InvokeRepeating("IncreaseFluidAmount", 0.0f, (1));
     }
 
     void closeTube()
@@ -83,7 +90,7 @@ public class PipeManager : MonoBehaviour
         else
         {
             GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(blendShapeIndex, size++);
-            Debug.Log("Blend Shape Index: " + blendShapeIndex + ", Weight: " + blendShapeWeight);
+           // Debug.Log("Blend Shape Index: " + blendShapeIndex + ", Weight: " + blendShapeWeight);
         }
 
         
@@ -94,10 +101,13 @@ public class PipeManager : MonoBehaviour
     {
         bool tankIsFull;
 
-        currentPercentage = (100.0f / (callsPerSecond*totalTime));
-        tankIsFull = FluidCompositionManager.AddFluid(substanceFluid.name, currentPercentage);
+        //currentPercentage = (100.0f / (callsPerSecond*totalTime));
+        //currentPercentage = (100.0f / totalTime);
+        currentPercentage = 1;
+        //tankIsFull = FluidCompositionManager.AddFluid(substanceFluid.name, currentPercentage, substanceFluid.percentageGoal);
+        tankIsFull = FluidCompositionManager.AddFluid2(substanceFluid, currentPercentage);
 
-        if(tankIsFull)
+        if (tankIsFull)
         {
             CancelInvoke("IncreaseFluidAmount");
         }
@@ -108,7 +118,7 @@ public class PipeManager : MonoBehaviour
     {
         DateTime before = DateTime.Now;
 
-        while (currentPercentage <= goalPercentage)
+        while (currentPercentage <= percentageGoal)
         {
             currentPercentage += (100.0f / totalTime) * Time.deltaTime;
             Debug.Log("CurrentPercentage: " + currentPercentage);

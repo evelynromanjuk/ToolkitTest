@@ -9,6 +9,7 @@ public class UI_Scanner : MonoBehaviour
    
     public TMP_Text MachineScreenText;
     public KeypadManager KeypadManager;
+    public FluidCompositionManager FluidCompositionManager;
     private string ScreenTextName = " ";
     private string ScreenTextPassword = " ";
 
@@ -21,6 +22,9 @@ public class UI_Scanner : MonoBehaviour
         KeypadManager.SubscribePasswordEntered(OnNumberEntered);
         KeypadManager.SubscribePasswordCorrect(OnPasswordChecked);
         KeypadManager.SubscribePasswordReset(OnPasswordReset);
+
+        FluidCompositionManager.SubscribeFluidAmountChanged(OnFluidAmountChanged);
+        FluidCompositionManager.SubscribeCompositionCorrectEvent(OnCompositionCorrect);
     }
 
     void OnScan(EmployeeCard card)
@@ -56,5 +60,18 @@ public class UI_Scanner : MonoBehaviour
     void UpdateScreen()
     {
         MachineScreenText.text = "Name : " + ScreenTextName + " Passwort: " + ScreenTextPassword;
+    }
+
+    void OnFluidAmountChanged(float percentage)
+    {
+        MachineScreenText.text = "Derzeitiger Stand: " + percentage + "%.";
+    }
+
+    void OnCompositionCorrect(bool isCorrect)
+    {
+        if(isCorrect)
+        {
+            MachineScreenText.text = "You mixed the mysterious candy substance!!";
+        }
     }
 }

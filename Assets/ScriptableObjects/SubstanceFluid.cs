@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Fluid", menuName = "Fluid")]
 public class SubstanceFluid : ScriptableObject
 {
-    public float percentage;
     public Material material;
+
+    public float percentageGoal;
+    public float currentPercentage;
+    public bool reachedGoal;
+
 }
