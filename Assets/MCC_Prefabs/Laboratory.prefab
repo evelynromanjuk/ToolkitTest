@@ -283,6 +283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   substanceFluid: {fileID: 11400000, guid: 904d19e70ed3e0d4db08a33834987cd5, type: 2}
   FluidCompositionManager: {fileID: 5742229687212414290}
+  KeypadManager: {fileID: 4157254762141945451}
+  Valve: {fileID: 446475083709458504}
 --- !u!1 &372297772518803952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,7 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: {fileID: 599102323275568038}
-  KeypadManager: {fileID: 4157254762141945451}
+  FluidCompositionManager: {fileID: 5742229687212414290}
   isOpen: 0
 --- !u!1 &809543995442552788
 GameObject:
@@ -4153,7 +4155,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4629339774137621360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2589661543174063916}
@@ -4161,7 +4163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0443}
+  m_AnchoredPosition: {x: 0, y: -0.002}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7445324050231134599
@@ -4218,15 +4220,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.035
-  m_fontSizeBase: 0.035
+  m_fontSize: 0.03
+  m_fontSizeBase: 0.03
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4658,6 +4660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   substanceFluid: {fileID: 11400000, guid: 06a937bc0ba3bac4bbf7b70b998278c3, type: 2}
   FluidCompositionManager: {fileID: 5742229687212414290}
+  KeypadManager: {fileID: 4157254762141945451}
+  Valve: {fileID: 1968079585685977760}
 --- !u!1 &5182014955776986050
 GameObject:
   m_ObjectHideFlags: 0

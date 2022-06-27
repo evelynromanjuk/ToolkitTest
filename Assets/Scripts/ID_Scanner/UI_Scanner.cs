@@ -43,7 +43,7 @@ public class UI_Scanner : MonoBehaviour
     void OnPasswordChecked(bool isCorrect)
     {
         if(isCorrect)
-            MachineScreenText.text = "Willkommen im Bubblegum-o-mat!";
+            MachineScreenText.text = "Automatisches Befüllen fehlgeschlagen. Befüllen Sie den Tank manuell.";
         else
         {
             ScreenTextPassword = " ";
@@ -71,7 +71,7 @@ public class UI_Scanner : MonoBehaviour
     {
         if(isCorrect)
         {
-            MachineScreenText.text = "You mixed the mysterious candy substance!!";
+            MachineScreenText.text = "Substanz erfolgreich hergestellt. Hebel betätigen zum Auswurf.";
         }
     }
 }

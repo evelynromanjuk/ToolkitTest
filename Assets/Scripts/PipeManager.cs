@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PipeManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PipeManager : MonoBehaviour
     // Action<string, int> FluidFlowingEvent;
 
     public FluidCompositionManager FluidCompositionManager;
+    public KeypadManager KeypadManager;
 
     private float percentageGoal;
     private float totalTime = 40.0f; //seconds
@@ -19,12 +21,20 @@ public class PipeManager : MonoBehaviour
 
     private bool isOpen = false;
 
+    private XRSimpleInteractable simpleInteractable = null;
+    public GameObject Valve;
+
 
     private void Awake()
     {
         substanceFluid.currentPercentage = 0;
         substanceFluid.reachedGoal = false;
         FluidCompositionManager.addFluidToList(substanceFluid);
+
+        simpleInteractable = Valve.GetComponent<XRSimpleInteractable>();
+        simpleInteractable.enabled = false;
+
+        KeypadManager.SubscribePasswordCorrect(OnPasswordChecked);
     }
     void Start()
     {
@@ -129,6 +139,18 @@ public class PipeManager : MonoBehaviour
         Debug.Log("Fluid increase finished. Duration in milliseconds: " + duration.Seconds);
 
         Debug.Log("Fluid increase finished");
+    }
+
+    void OnPasswordChecked(bool isCorrect)
+    {
+        if(isCorrect)
+        {
+            simpleInteractable.enabled = true;
+        }
+        else
+        {
+            simpleInteractable.enabled = false;
+        }
     }
 
 
