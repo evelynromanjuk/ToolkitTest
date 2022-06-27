@@ -210,6 +210,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 768385792054112951}
     m_Modifications:
+    - target: {fileID: 3680375897841257765, guid: eeead345d25d6934faac6a854a78c747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
     - target: {fileID: 4634919029455493017, guid: eeead345d25d6934faac6a854a78c747,
         type: 3}
       propertyPath: m_RootOrder
@@ -270,6 +275,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk_Floors_coll
       objectReference: {fileID: 0}
+    - target: {fileID: 6476173182397378998, guid: eeead345d25d6934faac6a854a78c747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
+    - target: {fileID: 6713950010766535104, guid: eeead345d25d6934faac6a854a78c747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeead345d25d6934faac6a854a78c747, type: 3}
 --- !u!4 &7255067819030001685 stripped
@@ -285,6 +300,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 768385792054112951}
     m_Modifications:
+    - target: {fileID: 872025224045541262, guid: 3a9cb1545033b754b89ba6cd5af82c87,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
+    - target: {fileID: 1448625360599705238, guid: 3a9cb1545033b754b89ba6cd5af82c87,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
     - target: {fileID: 1623043944861732969, guid: 3a9cb1545033b754b89ba6cd5af82c87,
         type: 3}
       propertyPath: m_RootOrder
@@ -345,6 +370,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk_Container_coll
       objectReference: {fileID: 0}
+    - target: {fileID: 3005173762208871236, guid: 3a9cb1545033b754b89ba6cd5af82c87,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
+    - target: {fileID: 5222357741209162849, guid: 3a9cb1545033b754b89ba6cd5af82c87,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9cb1545033b754b89ba6cd5af82c87, type: 3}
 --- !u!4 &3578280620670788294 stripped
@@ -360,6 +395,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8119836354872221312}
     m_Modifications:
+    - target: {fileID: 583624394781394353, guid: 2fadcbe619a350148a1c27e0f446ea64,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
     - target: {fileID: 6983330361163012533, guid: 2fadcbe619a350148a1c27e0f446ea64,
         type: 3}
       propertyPath: m_RootOrder
@@ -435,6 +475,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk_Door_L
       objectReference: {fileID: 0}
+    - target: {fileID: 8116305847124861658, guid: 2fadcbe619a350148a1c27e0f446ea64,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5fcbc9f9792a7f489f5cd55312d6736, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fadcbe619a350148a1c27e0f446ea64, type: 3}
 --- !u!4 &2612049922786346337 stripped
