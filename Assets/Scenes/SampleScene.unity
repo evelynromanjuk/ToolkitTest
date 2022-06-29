@@ -182,16 +182,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2564866665376947209, guid: 543353424bcad0d4fb878e89139352e0,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123019485707864598, guid: 543353424bcad0d4fb878e89139352e0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.696
-      objectReference: {fileID: 0}
     - target: {fileID: 6157328809701063266, guid: 543353424bcad0d4fb878e89139352e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -251,11 +241,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AnalyzingRoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 6728377830751097489, guid: 543353424bcad0d4fb878e89139352e0,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8074328557816093803, guid: 543353424bcad0d4fb878e89139352e0,
         type: 3}

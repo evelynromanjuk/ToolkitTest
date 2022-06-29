@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Green
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9bc415de7b4f55b4e8f83ff5c444f610, type: 2}
-  percentageGoal: 15
-  currentPercentage: 0
-  reachedGoal: 0
+  percentageGoal: 7
+  currentPercentage: 7
+  reachedGoal: 1

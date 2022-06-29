@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: a5b43622bb360264f9603ff21c42f572, type: 2}
-  percentageGoal: 20
-  currentPercentage: 0
-  reachedGoal: 0
+  percentageGoal: 7
+  currentPercentage: 7
+  reachedGoal: 1

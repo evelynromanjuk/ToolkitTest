@@ -22,4 +22,13 @@ public class SpawnBall : MonoBehaviour
 
         Debug.Log("Spawn Ball");
     }
+
+    public void spawnBall2()
+    {
+        GameObject b = Instantiate(ballPrefab);
+        b.transform.SetParent(parent, false);
+        b.transform.localPosition = new Vector3(0,0,0);
+
+        Debug.Log("Spawn Ball");
+    }
 }
