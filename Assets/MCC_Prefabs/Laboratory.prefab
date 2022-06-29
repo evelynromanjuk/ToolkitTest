@@ -5297,20 +5297,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000002, y: 2.1000001, z: 2.0000007}
   m_Center: {x: 0, y: 0.05000007, z: 0}
---- !u!114 &8743958457947448504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3536409118345781082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e4bafb9f811cb47aa4f3aa5e698bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableObject: {fileID: 1361079021917916644}
-  KeypadManager: {fileID: 4157254762141945451}
 --- !u!95 &1361079021917916644
 Animator:
   serializedVersion: 3
@@ -5330,6 +5316,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8743958457947448504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536409118345781082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e4bafb9f811cb47aa4f3aa5e698bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableObject: {fileID: 1361079021917916644}
+  KeypadManager: {fileID: 4157254762141945451}
 --- !u!1 &3634926824180915672
 GameObject:
   m_ObjectHideFlags: 0
@@ -12476,6 +12476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Movable Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96d5bbffb3b5314469704bd84c05eee8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96d5bbffb3b5314469704bd84c05eee8, type: 3}
