@@ -15,7 +15,6 @@ public class PipeManager : MonoBehaviour
 
     private float percentageGoal;
     private float totalTime = 40.0f; //seconds
-    private float callsPerSecond = 4.0f;
     private float currentPercentage = 0.0f;
     private float size = 0.0f;
 
