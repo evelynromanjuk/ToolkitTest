@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class AnalyzerManager : MonoBehaviour
     [SerializeField] private CheckSocket socketKolben;
 
     Dictionary<int, bool> sockets;
+
+    Action<Dictionary<int, bool>> SocketsCheckedEvent;
 
     private bool allCorrect;
     private bool substanceBallInserted;
@@ -36,10 +39,9 @@ public class AnalyzerManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SubscribeSocketsCheckedEvent(Action<Dictionary<int, bool>> method)
     {
-        
+        SocketsCheckedEvent += method;
     }
 
     void logInsertedPart(int socketId, bool partIsCorrect)
@@ -93,6 +95,16 @@ public class AnalyzerManager : MonoBehaviour
             Debug.Log("Failed: Substance Ball inserted = " + substanceBallInserted + ", all parts correct= " + allCorrect);
 
         }
+    }
+
+    public void checkSockets()
+    {
+        foreach(KeyValuePair<int, bool> entry in sockets)
+        {
+            Debug.Log("Socket #" + entry.Key + ": " + entry.Value);
+        }
+
+        SocketsCheckedEvent.Invoke(sockets);
     }
 
 }
