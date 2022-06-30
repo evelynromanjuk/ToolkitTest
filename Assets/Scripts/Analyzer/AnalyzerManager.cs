@@ -14,6 +14,7 @@ public class AnalyzerManager : MonoBehaviour
     Dictionary<int, bool> sockets;
 
     Action<Dictionary<int, bool>> SocketsCheckedEvent;
+    Action SubstanceAnalyzedEvent;
 
     private bool allCorrect;
     private bool substanceBallInserted;
@@ -37,6 +38,11 @@ public class AnalyzerManager : MonoBehaviour
         socketZahnrad.SubscribePartInsertedEvent(logInsertedPart);
         socketKolben.SubscribePartInsertedEvent(logInsertedPart);
 
+    }
+
+    public void SubscribeSubstanceAnalyzedEvent(Action method)
+    {
+        SubstanceAnalyzedEvent += method;
     }
 
     public void SubscribeSocketsCheckedEvent(Action<Dictionary<int, bool>> method)
@@ -89,6 +95,7 @@ public class AnalyzerManager : MonoBehaviour
         if(allCorrect & substanceBallInserted)
         {
             Debug.Log("CONGRATULATIONSSSS");
+            SubstanceAnalyzedEvent.Invoke();
         }
         else
         {

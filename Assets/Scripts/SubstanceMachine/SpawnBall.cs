@@ -8,6 +8,7 @@ public class SpawnBall : MonoBehaviour
     public GameObject ballPrefab;
     public Transform parent;
 
+
     // Start is called before the first frame update
     void Start()
     {
