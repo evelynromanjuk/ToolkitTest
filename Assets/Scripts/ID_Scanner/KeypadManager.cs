@@ -7,10 +7,15 @@ public class KeypadManager : MonoBehaviour
 {
     private int enteredValue = 0;
     private int employeePassword = 0;
+
+    private string doorPassword = "LOLLIPOP";
+    private string enteredPassword = "";
+
     public Scanner Scanner;
 
     Action<int> PasswordEnteredEvent;
     Action<bool> PasswordCorrectEvent;
+    Action<bool> DoorPasswordCorrectEvent;
     Action PasswordResetEvent;
 
     void Start()
@@ -33,6 +38,10 @@ public class KeypadManager : MonoBehaviour
         PasswordResetEvent += method;
     }
 
+    public void SubscribeDoorPasswordCorrect(Action<bool> method)
+    {
+        DoorPasswordCorrectEvent += method;
+    }
 
 
     public void UpdateValue(int number)
@@ -49,7 +58,7 @@ public class KeypadManager : MonoBehaviour
         Debug.Log("Saved Password as: " + employeePassword);
     }
 
-    public void CheckPassword()
+    public void CheckCandyPassword()
     {
         bool isCorrect = false;
 
@@ -68,10 +77,41 @@ public class KeypadManager : MonoBehaviour
         PasswordCorrectEvent.Invoke(isCorrect);
     }
 
-    public void ResetPassword()
+    public void ResetCandyPassword()
     {
         enteredValue = 0;
         PasswordResetEvent.Invoke();
 
+    }
+
+    public void EnterDoorPassword(string letter)
+    {
+        enteredPassword = enteredPassword + letter;
+        Debug.Log("KeypadManager: Entered Password: " + enteredPassword);
+    }
+
+    public void CheckDoorPassword()
+    {
+        bool isCorrect = false;
+
+        if(doorPassword == enteredPassword)
+        {
+            Debug.Log("PASSWORD CORRECT");
+            isCorrect = true;
+        }
+        else
+        {
+            Debug.Log("PASSWORD IS NOT CORRECT");
+            enteredPassword = "";
+        }
+
+        DoorPasswordCorrectEvent.Invoke(isCorrect);
+    }
+   
+
+
+    public void ResetDoorPassword()
+    {
+        enteredPassword = "";
     }
 }
