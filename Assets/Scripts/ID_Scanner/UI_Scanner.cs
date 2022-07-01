@@ -22,6 +22,7 @@ public class UI_Scanner : MonoBehaviour
         KeypadManager.SubscribePasswordEntered(OnNumberEntered);
         KeypadManager.SubscribePasswordCorrect(OnPasswordChecked);
         KeypadManager.SubscribePasswordReset(OnPasswordReset);
+        KeypadManager.SubscribeCardInvalid(OnCardInvalid);
 
         FluidCompositionManager.SubscribeFluidAmountChanged(OnFluidAmountChanged);
         FluidCompositionManager.SubscribeCompositionCorrectEvent(OnCompositionCorrect);
@@ -73,5 +74,10 @@ public class UI_Scanner : MonoBehaviour
         {
             MachineScreenText.text = "Substanz erfolgreich hergestellt. Hebel betätigen zum Auswurf.";
         }
+    }
+
+    void OnCardInvalid()
+    {
+        MachineScreenText.text = "Diese Karte ist ungültig.";
     }
 }
