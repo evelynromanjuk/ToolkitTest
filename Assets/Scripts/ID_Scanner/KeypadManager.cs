@@ -73,12 +73,10 @@ public class KeypadManager : MonoBehaviour
 
         if (employeePassword == enteredValue & cardIsValid)
         {
-            Debug.Log("THIS IS CORRECT");
             isCorrect = true;
         }
         else
         {
-            Debug.Log("THIS IS NOT CORRECT! Employee Password: " + employeePassword + ", enteredValue: " + enteredValue);
             enteredValue = 0;
         }
 

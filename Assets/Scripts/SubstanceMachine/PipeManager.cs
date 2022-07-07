@@ -14,7 +14,6 @@ public class PipeManager : MonoBehaviour
     public KeypadManager KeypadManager;
 
     private float percentageGoal;
-    private float totalTime = 40.0f; //seconds
     private float currentPercentage = 0.0f;
     private float size = 0.0f;
 
@@ -105,39 +104,18 @@ public class PipeManager : MonoBehaviour
         
     }
 
-    //später nochmal verbessern!!
     void IncreaseFluidAmount()
     {
         bool tankIsFull;
 
-        //currentPercentage = (100.0f / (callsPerSecond*totalTime));
-        //currentPercentage = (100.0f / totalTime);
         currentPercentage = 1;
-        //tankIsFull = FluidCompositionManager.AddFluid(substanceFluid.name, currentPercentage, substanceFluid.percentageGoal);
-        tankIsFull = FluidCompositionManager.AddFluid2(substanceFluid, currentPercentage);
+        tankIsFull = FluidCompositionManager.AddFluid(substanceFluid, currentPercentage);
 
         if (tankIsFull)
         {
             CancelInvoke("IncreaseFluidAmount");
         }
 
-    }
-
-    void IncreaseFluidAmount2()
-    {
-        DateTime before = DateTime.Now;
-
-        while (currentPercentage <= percentageGoal)
-        {
-            currentPercentage += (100.0f / totalTime) * Time.deltaTime;
-            Debug.Log("CurrentPercentage: " + currentPercentage);
-        }
-
-        DateTime after = DateTime.Now;
-        TimeSpan duration = after.Subtract(before);
-        Debug.Log("Fluid increase finished. Duration in milliseconds: " + duration.Seconds);
-
-        Debug.Log("Fluid increase finished");
     }
 
     void OnPasswordChecked(bool isCorrect)

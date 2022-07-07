@@ -30,12 +30,9 @@ public class Scanner : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // test on tag if it is a scannable object
-        // ... 
         EmployeeCard card = collision.gameObject.GetComponent<EmployeeCard>();
         if(card == null)
         {
-            Debug.Log("object is not a card!");
             return;
         }
 

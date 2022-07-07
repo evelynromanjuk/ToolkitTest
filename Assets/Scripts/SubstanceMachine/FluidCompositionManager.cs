@@ -59,51 +59,7 @@ public class FluidCompositionManager : MonoBehaviour
 
     }
 
-    //public bool AddFluid(string name, float percentage, float goalPercentage)
-    //{
-    //    bool tankIsFull = false;
-
-    //    if((totalPercentage + percentage) <= 20) //100 % 
-    //    {
-    //        if (!fluids.ContainsKey(name))
-    //        {
-    //            fluids.Add(name, percentage);
-    //            Debug.Log("FCM: New fluid added!");
-    //        }
-    //        else
-    //        {
-    //            fluids[name] += percentage;
-    //            //Debug.Log("FCM: Fluid percentage updated. Name: " + name + ", " + percentage + "%");
-
-    //        }
-    //        totalPercentage += percentage;
-    //        FluidAmountChangedEvent.Invoke(totalPercentage);
-
-    //        if(fluids[name] == goalPercentage)
-    //        {
-
-    //        }
-
-    //        Debug.Log("FCM: Total Percentage: " + totalPercentage + "%");
-    //        Debug.Log("FCM: Fluid percentage updated. Name: " + name + ", " + fluids[name] + "%");
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("FCM: Tank is full! Total Percentage: " + totalPercentage);
-    //        tankIsFull = true;
-    //        //TankFilledEvent.Invoke(tankIsFull);
-    //        Debug.Log("Tank contains following fluids:");
-    //        foreach (KeyValuePair<string, float> entry in fluids)
-    //        {
-    //            Debug.Log(entry.Key + "/ " + entry.Value + "%");
-    //        }
-    //    }
-
-    //    return tankIsFull;
-        
-    //}
-
-    public bool AddFluid2(SubstanceFluid fluid, float percentage)
+    public bool AddFluid(SubstanceFluid fluid, float percentage)
     {
         bool tankIsFull = false;
         string fluidName = fluid.name;
