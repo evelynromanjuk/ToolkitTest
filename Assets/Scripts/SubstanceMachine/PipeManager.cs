@@ -7,9 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class PipeManager : MonoBehaviour
 {
     public SubstanceFluid substanceFluid;
-
-    // Action<string, int> FluidFlowingEvent;
-
     public FluidCompositionManager FluidCompositionManager;
     public KeypadManager KeypadManager;
 
@@ -50,7 +47,6 @@ public class PipeManager : MonoBehaviour
         {
             closeTube();
         }
-
     }
 
     void openTube()
@@ -66,7 +62,6 @@ public class PipeManager : MonoBehaviour
         isOpen = false;
         CancelInvoke("IncreaseFluidAmount");
         InvokeRepeating("Scale", 0.0f, 0.02f);
-        Debug.Log("Closed with current Percentage: " + FluidCompositionManager.GetCurrentTankVolume());
     }
 
     void Scale()
@@ -98,7 +93,6 @@ public class PipeManager : MonoBehaviour
         else
         {
             GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(blendShapeIndex, size++);
-           // Debug.Log("Blend Shape Index: " + blendShapeIndex + ", Weight: " + blendShapeWeight);
         }
 
         

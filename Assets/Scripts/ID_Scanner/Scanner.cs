@@ -17,7 +17,6 @@ public class Scanner : MonoBehaviour
         GameObjectLocator.ScannerObject = this;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         ObjectScannedEvent += CollisionDetected;

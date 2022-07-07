@@ -11,13 +11,6 @@ public class BallController : MonoBehaviour
     void Start()
     {
         substanceBall = this.GetComponent<Animator>();
-        Debug.Log("Helloo???");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void playAnimation(GameObject parent)
@@ -26,13 +19,5 @@ public class BallController : MonoBehaviour
 
         Debug.Log("Play Animation");
         substanceBall.Play("MoveBall", 0, 0.0f);
-
-
-        //if (substanceBall.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-        //{
-        //    Debug.Log("SubstanceBall destroyed");
-        //    Destroy(this);
-        //}
-
     }
 }

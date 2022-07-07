@@ -41,12 +41,12 @@ public class CheckSocket : MonoBehaviour
         if (analyzerPart.transform.name == insertedPart.transform.name)
         {
             partIsCorrect = true;
-            Debug.Log("This is the correct part");
+            Debug.Log("Correct part.");
         }
 
         else
         {
-            Debug.Log("This is NOT the correct part");
+            Debug.Log("Incorrect part.");
         }
 
         PartInsertedEvent.Invoke(socketID, partIsCorrect);

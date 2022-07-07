@@ -20,8 +20,6 @@ public class SpawnBall : MonoBehaviour
         GameObject b = Instantiate(ballPrefab);
         b.transform.SetParent(parent, false);
         b.transform.localPosition = new Vector3(-0.7f, 1.5f, 0);
-
-        Debug.Log("Spawn Ball");
     }
 
     public void spawnBall2()
@@ -29,7 +27,5 @@ public class SpawnBall : MonoBehaviour
         GameObject b = Instantiate(ballPrefab);
         b.transform.SetParent(parent, false);
         b.transform.localPosition = new Vector3(0,0,0);
-
-        Debug.Log("Spawn Ball");
     }
 }

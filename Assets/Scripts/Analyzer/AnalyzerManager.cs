@@ -19,7 +19,6 @@ public class AnalyzerManager : MonoBehaviour
     private bool allCorrect;
     private bool substanceBallInserted;
 
-    // Start is called before the first frame update
     void Start()
     {
         allCorrect = false;
@@ -83,7 +82,7 @@ public class AnalyzerManager : MonoBehaviour
     public void InsertSubstanceBall()
     {
         substanceBallInserted = true;
-        Debug.Log("Ball inserted");
+        Debug.Log("Ball inserted.");
 
     }
 

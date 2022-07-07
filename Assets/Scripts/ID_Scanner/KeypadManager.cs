@@ -101,7 +101,6 @@ public class KeypadManager : MonoBehaviour
     public void EnterDoorPassword(string letter)
     {
         enteredPassword = enteredPassword + letter;
-        Debug.Log("KeypadManager: Entered Password: " + enteredPassword);
     }
 
     public void CheckDoorPassword()
@@ -110,12 +109,12 @@ public class KeypadManager : MonoBehaviour
 
         if(doorPassword == enteredPassword)
         {
-            Debug.Log("PASSWORD CORRECT");
+            Debug.Log("Password correct.");
             isCorrect = true;
         }
         else
         {
-            Debug.Log("PASSWORD IS NOT CORRECT");
+            Debug.Log("Password not correct.");
             enteredPassword = "";
         }
 

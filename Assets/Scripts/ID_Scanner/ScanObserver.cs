@@ -13,6 +13,6 @@ public class ScanObserver : MonoBehaviour
 
     private void OnScan(EmployeeCard card)
     {
-        Debug.Log($"Play Sound! scan detected: {card.EmployeeName}. Is valid: {card.IsValid}");
+        Debug.Log($"Scan detected: {card.EmployeeName}. Is valid: {card.IsValid}");
     }
 }

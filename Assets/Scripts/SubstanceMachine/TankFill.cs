@@ -13,7 +13,6 @@ public class TankFill : MonoBehaviour
     {
         tankMaterial = GetComponent<MeshRenderer>().material;
         tankMaterial.SetFloat("_FillRate", -1);
-        Debug.Log("Applied Material: " + tankMaterial);
     }
     void Start()
     {
@@ -27,7 +26,6 @@ public class TankFill : MonoBehaviour
         float fillRate = conversion1 - 0.5f;
 
         tankMaterial.SetFloat("_FillRate", fillRate);
-        Debug.Log("Current Fill Rate: " + fillRate);
 
     }
 }

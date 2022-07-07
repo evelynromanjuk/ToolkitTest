@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Lever : MonoBehaviour
 {
     [SerializeField] private Animator myDoor = null;
-    //[SerializeField] private KeypadManager KeypadManager;
     [SerializeField] private FluidCompositionManager FluidCompositionManager;
 
     private XRSimpleInteractable simpleInteractable = null;
@@ -21,7 +20,6 @@ public class Lever : MonoBehaviour
 
     void Start()
     {
-        //KeypadManager.SubscribePasswordCorrect(OnPasswordCorrect);
         FluidCompositionManager.SubscribeCompositionCorrectEvent(OnCompositionCorrect);
     }
 
@@ -41,8 +39,6 @@ public class Lever : MonoBehaviour
             isOpen = true;
             simpleInteractable.enabled = false;
         }
-
-        Debug.Log("You Clicked");
     }
 
 }
