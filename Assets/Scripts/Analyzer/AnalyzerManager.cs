@@ -32,11 +32,11 @@ public class AnalyzerManager : MonoBehaviour
         sockets.Add(4, false);
         sockets.Add(5, false);
 
-        socketChip.SubscribePartInsertedEvent(logInsertedPart);
-        socketKabel1.SubscribePartInsertedEvent(logInsertedPart);
-        socketKabel2.SubscribePartInsertedEvent(logInsertedPart);
-        socketZahnrad.SubscribePartInsertedEvent(logInsertedPart);
-        socketKolben.SubscribePartInsertedEvent(logInsertedPart);
+        socketChip.SubscribePartInsertedEvent(LogInsertedPart);
+        socketKabel1.SubscribePartInsertedEvent(LogInsertedPart);
+        socketKabel2.SubscribePartInsertedEvent(LogInsertedPart);
+        socketZahnrad.SubscribePartInsertedEvent(LogInsertedPart);
+        socketKolben.SubscribePartInsertedEvent(LogInsertedPart);
 
     }
 
@@ -50,7 +50,7 @@ public class AnalyzerManager : MonoBehaviour
         SocketsCheckedEvent += method;
     }
 
-    void logInsertedPart(int socketId, bool partIsCorrect)
+    void LogInsertedPart(int socketId, bool partIsCorrect)
     {
         if(partIsCorrect)
         {
@@ -61,10 +61,10 @@ public class AnalyzerManager : MonoBehaviour
             sockets[socketId] = false;
         }
 
-        checkAllSockets();
+        CheckAllSockets();
     }
 
-    void checkAllSockets()
+    void CheckAllSockets()
     {
         foreach(KeyValuePair<int, bool> entry in sockets)
         {
@@ -78,19 +78,16 @@ public class AnalyzerManager : MonoBehaviour
                 allCorrect = true;
             }
         }
-
-        if (allCorrect)
-            Debug.Log("All Parts are correct!");
     }
 
-    public void insertSubstanceBall()
+    public void InsertSubstanceBall()
     {
         substanceBallInserted = true;
         Debug.Log("Ball inserted");
 
     }
 
-    public void startAnalyzer()
+    public void StartAnalyzer()
     {
         if(allCorrect & substanceBallInserted)
         {
@@ -104,7 +101,7 @@ public class AnalyzerManager : MonoBehaviour
         }
     }
 
-    public void checkSockets()
+    public void CheckSockets()
     {
         foreach(KeyValuePair<int, bool> entry in sockets)
         {

@@ -222,7 +222,7 @@ PrefabInstance:
     - target: {fileID: 1286339703069117956, guid: 6d87d8a282462af4eab90aa8231c9af9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1286339703069117956, guid: 6d87d8a282462af4eab90aa8231c9af9,
         type: 3}
@@ -296,7 +296,7 @@ PrefabInstance:
     - target: {fileID: 1286339703069117956, guid: 6d87d8a282462af4eab90aa8231c9af9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1286339703069117956, guid: 6d87d8a282462af4eab90aa8231c9af9,
         type: 3}
@@ -919,7 +919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1043,7 +1043,7 @@ Transform:
   - {fileID: 2122157924}
   - {fileID: 1840510401}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838055523
 GameObject:
@@ -1078,6 +1078,18 @@ Transform:
   m_Father: {fileID: 1874958990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038678689 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 951799269759815735, guid: 543353424bcad0d4fb878e89139352e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1501377296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb0c634d115e245b277de38fd5c998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1174012367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2162,7 +2174,7 @@ PrefabInstance:
     - target: {fileID: 1286339703069117956, guid: 6d87d8a282462af4eab90aa8231c9af9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1286339703069117956, guid: 6d87d8a282462af4eab90aa8231c9af9,
         type: 3}
@@ -2799,6 +2811,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6062948406709911651, guid: 83f0ca35def21e14ba8a3580e1c0c902,
+        type: 3}
+      propertyPath: analyzerManager
+      value: 
+      objectReference: {fileID: 1038678689}
     - target: {fileID: 6304795262780161520, guid: 83f0ca35def21e14ba8a3580e1c0c902,
         type: 3}
       propertyPath: m_AnchorMax.y
