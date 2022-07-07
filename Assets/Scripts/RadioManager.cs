@@ -8,10 +8,6 @@ public class RadioManager : MonoBehaviour
     private int soundID;
     private int trackNumber = 3;
 
-    public string track1 = "Never gonna give you up, never gonna let you doooown";
-    public string track2 = "Caaan you feeel the loooove toniiiiight";
-    public string track3 = "I say disco, you say party! Disco disco party party!";
-
     public AudioSource radio1;
     public AudioSource radio2;
     public AudioSource morseCode;
@@ -23,12 +19,7 @@ public class RadioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tracks = new Dictionary<int, string>();
         radioTracks = new Dictionary<int, AudioSource>();
-
-        tracks.Add(1, track1);
-        tracks.Add(2, track2);
-        tracks.Add(3, track3);
 
         radioTracks.Add(1, radio1);
         radioTracks.Add(2, radio2);
@@ -64,9 +55,7 @@ public class RadioManager : MonoBehaviour
             if(currentTrack != null)
                 currentTrack.Stop();
             currentTrack = radioTracks[soundID];
-            Debug.Log("Current Track: " + currentTrack.name);
             currentTrack.Play();
-            Debug.Log(tracks[soundID]);
         }
     }
 
