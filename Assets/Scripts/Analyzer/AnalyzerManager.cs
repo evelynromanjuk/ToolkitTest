@@ -91,7 +91,7 @@ public class AnalyzerManager : MonoBehaviour
     {
         if(allCorrect & substanceBallInserted)
         {
-            Debug.Log("CONGRATULATIONSSSS");
+            Debug.Log("Level completed.");
             SubstanceAnalyzedEvent.Invoke();
         }
         else
